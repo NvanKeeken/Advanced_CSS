@@ -1,0 +1,84 @@
+@import "./fonts";
+@import "./variables";
+@import "../media-querys/tablet";
+@import "../media-querys/mobile";
+
+.container {
+  grid-area: socialmedia;
+  overflow-x: hidden;
+}
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  right: 0;
+  bottom: 0;
+  list-style: none;
+
+  a {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: $text-color;
+    margin-left: 40px;
+    text-align: center;
+  }
+  [class^="social-media__"] {
+    padding: $social-padding;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 250px;
+    transform: translate(210px, 0);
+    transition-timing-function: ease-in;
+
+    &:hover {
+      transform: translate(10px, 0);
+      transition-timing-function: ease-in;
+      transition-duration: 0.75s;
+    }
+  }
+
+  [class^="fa"] {
+    color: $text-color;
+    padding-left: $social-padding;
+  }
+
+  &__blog {
+    background-color: $laptop-color;
+  }
+
+  &__facebook {
+    background-color: $facebook-color;
+  }
+
+  &__twitter {
+    background-color: $twitter-color;
+  }
+
+  &__github {
+    background-color: $github-color;
+  }
+
+  &__linkedin {
+    background-color: $linkedin-color;
+  }
+}
+.fa-laptop-code::before {
+  content: "\f5fc";
+  @include social_icons();
+}
+.fa-twitter::before {
+  content: "\f099";
+  @include social_icons();
+}
+.fa-linkedin-in::before {
+  content: "\f0e1";
+  @include social_icons();
+}
+.fa-facebook-f::before {
+  content: "\f39e";
+  @include social_icons();
+}
+.fa-github::before {
+  content: "\f09b";
+  @include social_icons();
+}

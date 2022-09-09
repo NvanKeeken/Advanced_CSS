@@ -1,0 +1,60 @@
+@import "./variables";
+@import "../media-querys/tablet";
+@import "../media-querys/mobile";
+
+.portfolio {
+  grid-area: portfolio;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  justify-content: center;
+  align-items: center;
+  column-gap: $gap;
+  row-gap: $gap;
+  height: 100%;
+  width: 100%;
+
+  &__icon {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-image: url(./images/portrait.jpg);
+    background-position: contain;
+    background-size: 200px;
+    border-radius: $portfolio_border-radius;
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: $portfolio_border-radius;
+    border: none;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
+    border-radius: $portfolio_border-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &__overlay:hover {
+    opacity: 10;
+  }
+
+  &__button {
+    font-weight: bold;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,628 @@
+body {
+  background-color: #c3cfe2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 900px 700px 1fr;
+  grid-template-areas: "testimonial" "portfolio" "socialmedia";
+  margin: 0;
+}
+
+/*-----------------------------------------------------------------Part 1 Testimonial-------------------------------*/
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px 2fr 500px;
+  }
+  .portfolio {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    width: 112.5;
+    height: 150;
+  }
+  .portfolio__icon {
+    width: 300px;
+    height: 300px;
+    background-size: 300px;
+  }
+  .social-media [class^=social-media__] {
+    -webkit-transform: translate(210px, 0);
+            transform: translate(210px, 0);
+    top: 50%;
+  }
+}
+@media (max-width: 630px) {
+  body {
+    overflow-x: hidden;
+  }
+  .social-media [class^=social-media__] {
+    -webkit-transform: translate(210px, 0);
+            transform: translate(210px, 0);
+  }
+}
+@media (max-width: 400px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 1fr 500px;
+    width: 100%;
+    height: 100%;
+  }
+  .testimonial__box {
+    width: 250px;
+    height: 325px;
+  }
+  .testimonial__footer {
+    width: 250px;
+    height: 125px;
+  }
+  .testimonial__text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 30px;
+  }
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(0, -90px);
+            transform: translate(0, -90px);
+  }
+  .portfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: hidden;
+  }
+  .portfolio__icon {
+    width: 400px;
+    height: 400px;
+    background-size: 400px;
+  }
+  .portfolio {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .social-media {
+    overflow-x: hidden;
+  }
+  .name, .website {
+    font-size: 20px;
+  }
+}
+.testimonial {
+  margin: auto;
+}
+
+.testimonial__box {
+  grid-area: testimonial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  text-align: center;
+  width: 450px;
+  height: 600px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 20px 2px grey;
+  box-shadow: 0 2px 20px 2px grey;
+  font-family: sans-serif;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 100px 40px 0 40px;
+  position: relative;
+}
+
+.testimonial__text {
+  position: relative;
+  top: -90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 0;
+  color: black;
+  font-weight: 525;
+  font-size: 25px;
+  line-height: 45px;
+  text-align: left;
+  margin: 0 20px;
+}
+
+.testimonial__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #686de0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 450px;
+  height: 150px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 40px;
+  padding-top: 50px;
+}
+
+img {
+  border: 6px solid #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-transform: translateY(-40px);
+  transform: translateY(-40px);
+  margin-top: 0;
+  margin-bottom: 70px;
+  z-index: 1;
+}
+
+.name {
+  color: white;
+  margin-bottom: 0px;
+  font-weight: 400;
+  margin-top: 40px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.website {
+  color: #c3cfe2;
+  font-weight: 550;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/**************************************************************************************Part 2 Portfolio************************/
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px 2fr 500px;
+  }
+  .portfolio {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    width: 112.5;
+    height: 150;
+  }
+  .portfolio__icon {
+    width: 300px;
+    height: 300px;
+    background-size: 300px;
+  }
+  .social-media [class^=social-media__] {
+    -webkit-transform: translate(210px, 0);
+            transform: translate(210px, 0);
+    top: 50%;
+  }
+}
+@media (max-width: 630px) {
+  body {
+    overflow-x: hidden;
+  }
+  .social-media [class^=social-media__] {
+    -webkit-transform: translate(210px, 0);
+            transform: translate(210px, 0);
+  }
+}
+@media (max-width: 400px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 1fr 500px;
+    width: 100%;
+    height: 100%;
+  }
+  .testimonial__box {
+    width: 250px;
+    height: 325px;
+  }
+  .testimonial__footer {
+    width: 250px;
+    height: 125px;
+  }
+  .testimonial__text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 30px;
+  }
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(0, -90px);
+            transform: translate(0, -90px);
+  }
+  .portfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: hidden;
+  }
+  .portfolio__icon {
+    width: 400px;
+    height: 400px;
+    background-size: 400px;
+  }
+  .portfolio {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .social-media {
+    overflow-x: hidden;
+  }
+  .name, .website {
+    font-size: 20px;
+  }
+}
+.portfolio {
+  grid-area: portfolio;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+  height: 100%;
+  width: 100%;
+}
+.portfolio__icon {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-image: url(./images/portrait.jpg);
+  background-position: contain;
+  background-size: 200px;
+  border-radius: 10px;
+}
+.portfolio__image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+}
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(37, 32, 48);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.portfolio__overlay:hover {
+  opacity: 10;
+}
+.portfolio__button {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/***************************************************************************************Part 3 Social-media buttons*************************/
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px 2fr 500px;
+  }
+  .portfolio {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    width: 112.5;
+    height: 150;
+  }
+  .portfolio__icon {
+    width: 300px;
+    height: 300px;
+    background-size: 300px;
+  }
+  .social-media [class^=social-media__] {
+    -webkit-transform: translate(210px, 0);
+            transform: translate(210px, 0);
+    top: 50%;
+  }
+}
+@media (max-width: 630px) {
+  body {
+    overflow-x: hidden;
+  }
+  .social-media [class^=social-media__] {
+    -webkit-transform: translate(210px, 0);
+            transform: translate(210px, 0);
+  }
+}
+@media (max-width: 400px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 1fr 500px;
+    width: 100%;
+    height: 100%;
+  }
+  .testimonial__box {
+    width: 250px;
+    height: 325px;
+  }
+  .testimonial__footer {
+    width: 250px;
+    height: 125px;
+  }
+  .testimonial__text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 30px;
+  }
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(0, -90px);
+            transform: translate(0, -90px);
+  }
+  .portfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: hidden;
+  }
+  .portfolio__icon {
+    width: 400px;
+    height: 400px;
+    background-size: 400px;
+  }
+  .portfolio {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .social-media {
+    overflow-x: hidden;
+  }
+  .name, .website {
+    font-size: 20px;
+  }
+}
+.container {
+  grid-area: socialmedia;
+  overflow-x: hidden;
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  right: 0;
+  bottom: 0;
+  list-style: none;
+}
+.social-media a {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #fff;
+  margin-left: 40px;
+  text-align: center;
+}
+.social-media [class^=social-media__] {
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 250px;
+  -webkit-transform: translate(210px, 0);
+          transform: translate(210px, 0);
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+.social-media [class^=social-media__]:hover {
+  -webkit-transform: translate(10px, 0);
+          transform: translate(10px, 0);
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+}
+.social-media [class^=fa] {
+  color: #fff;
+  padding-left: 10px;
+}
+.social-media__blog {
+  background-color: #e17b77;
+}
+.social-media__facebook {
+  background-color: #3b5998;
+}
+.social-media__twitter {
+  background-color: #00aced;
+}
+.social-media__github {
+  background-color: #333;
+}
+.social-media__linkedin {
+  background-color: #007bb6;
+}
+
+.fa-laptop-code::before {
+  content: "\f5fc";
+  font-family: FontAwesome;
+  font-weight: 400;
+}
+
+.fa-twitter::before {
+  content: "\f099";
+  font-family: FontAwesome;
+  font-weight: 400;
+}
+
+.fa-linkedin-in::before {
+  content: "\f0e1";
+  font-family: FontAwesome;
+  font-weight: 400;
+}
+
+.fa-facebook-f::before {
+  content: "\f39e";
+  font-family: FontAwesome;
+  font-weight: 400;
+}
+
+.fa-github::before {
+  content: "\f09b";
+  font-family: FontAwesome;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 900px 2fr 500px;
+  }
+  .portfolio {
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    width: 112.5;
+    height: 150;
+  }
+  .portfolio__icon {
+    width: 300px;
+    height: 300px;
+    background-size: 300px;
+  }
+  .social-media [class^=social-media__] {
+    -webkit-transform: translate(210px, 0);
+            transform: translate(210px, 0);
+    top: 50%;
+  }
+}
+@media (max-width: 630px) {
+  body {
+    overflow-x: hidden;
+  }
+  .social-media [class^=social-media__] {
+    -webkit-transform: translate(210px, 0);
+            transform: translate(210px, 0);
+  }
+}
+@media (max-width: 400px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 1fr 500px;
+    width: 100%;
+    height: 100%;
+  }
+  .testimonial__box {
+    width: 250px;
+    height: 325px;
+  }
+  .testimonial__footer {
+    width: 250px;
+    height: 125px;
+  }
+  .testimonial__text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 30px;
+  }
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(0, -90px);
+            transform: translate(0, -90px);
+  }
+  .portfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: hidden;
+  }
+  .portfolio__icon {
+    width: 400px;
+    height: 400px;
+    background-size: 400px;
+  }
+  .portfolio {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .social-media {
+    overflow-x: hidden;
+  }
+  .name, .website {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */

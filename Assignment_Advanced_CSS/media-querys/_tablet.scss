@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+    body {
+      grid-template-columns: 1fr;
+      grid-template-rows: 900px 2fr 500px;
+    }
+  
+    .portfolio {
+      grid-template-columns: 300px 300px;
+      grid-template-rows: 300px 300px 300px 300px;
+      column-gap: 10px;
+      width: calc(450*0.25);
+      height: calc(600*0.25);
+    }
+    .portfolio__icon {
+      width: 300px;
+      height: 300px;
+      background-size: 300px;
+    }
+    .social-media [class^="social-media__"] {
+      transform: translate(210px, 0);
+      top: 50%;
+  
+    }
+
+    }
+  
+  @media (max-width:630px){
+    body{
+      overflow-x: hidden;
+    }
+    .social-media [class^="social-media__"] {
+      transform: translate(210px, 0);
+  
+    }
+  }
+  

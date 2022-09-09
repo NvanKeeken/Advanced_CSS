@@ -1,0 +1,55 @@
+@media (max-width: 400px) {
+    body {
+      
+      grid-template-columns: 1fr;
+      grid-template-rows: 500px 1fr 500px;
+      width: 100%;
+      height: 100%;
+    
+    }
+    
+    .testimonial__box {
+      width: 250px;
+      height: 325px;
+      
+    }
+    .testimonial__footer{
+      width: 250px;
+      height: 125px;
+  
+    }
+    .testimonial__text{
+      font-size: 12px;
+      line-height: 20px;
+      margin-top: 30px;
+    }
+    .testimonial img {
+      width: 100px;
+      height: 100px;
+      transform: translate(0,-90px);
+    }
+    .portfolio {
+      grid-template-columns: 1fr;
+      grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    
+    .portfolio__icon {
+      width: 400px;
+      height: 400px;
+      background-size: 400px;
+  
+    }
+    .portfolio {
+      height: fit-content;
+    }
+    .social-media{
+      overflow-x: hidden;
+    }
+    .name, .website{
+      font-size: 20px;
+    }
+   
+  }
